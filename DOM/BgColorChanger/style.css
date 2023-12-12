@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 1rem;
+    padding: 4rem;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgb(192, 183, 183);
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.8rem;
+
+    .box {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.1rem;
+        box-shadow: 0 0 0.2rem 0 gray;
+        cursor: pointer;
+    }
+}
+
+button {
+    cursor: pointer;
+    margin: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    background-color: aquamarine;
+    border: 0;
+    color: rgb(71, 68, 68);
+    text-shadow: 0 0 0.1rem gray;
+    box-shadow: 0 0 0.3rem 0 rgb(185, 174, 174);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}

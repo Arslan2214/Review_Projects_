@@ -11,7 +11,7 @@ const getAlpha = (len) => {
 (() => {
     const len = process.argv[3];
     const formate = process.argv[2];
-    let numNo = 18 - len;
+    let numNo = 18 - len +1;
 
 
     // Explanation:
