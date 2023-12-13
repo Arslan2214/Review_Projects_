@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital@0;1&display=swap');
+
+:root {
+    --grn: hsl(158, 98%, 42%);
+    --wht: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 70%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 1.5rem;
+    margin-top: 4.5rem;
+    font-size: 2.5rem;
+
+    #logo {
+        color: var(--grn);
+    }
+}
+
+#inputField {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    box-shadow: 0 0 0.2rem gray;
+    border-radius: 2.5rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+}
+
+#inputField>input[type='text'] {
+    border: 0;
+    outline: 0;
+    padding: 0.3rem;
+}
+
+#inputField>button {
+    background-color: var(--grn);
+    color: var(--wht);
+    border: 0;
+    padding: 0.6rem 1rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+
+#cetagoryOpatiob {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 2rem;
+    list-style: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.9rem;
+    font-size: 1.4rem;
+    border: 0.1rem solid var(--grn);
+    color: var(--grn);
+    background-color: var(--wht);
+    cursor: pointer;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    user-select: none;
+}
+
+input:checked+label {
+    background-color: var(--grn);
+    color: var(--wht);
+}
+
+#gallery {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+img {
+    max-width: 30rem;
+}
+
+
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 85%;
+    }
+
+    #gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 110%;
+    }
+
+    #gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

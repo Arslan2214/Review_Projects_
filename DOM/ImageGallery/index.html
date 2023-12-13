@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| ImageGallery | with Infinite-Scroll</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <main></main>
+    <main>
+        <h2>Welcome, to <span id="logo">Pics_Store</span></h2>
+        <section>
+            <div id="inputField">
+                <input placeholder="Search" type="text">
+                <button id="searchBtn">Search</button>
+            </div>
+            <ul id="cetagoryOpatiob">
+                <li>
+                    <div>
+                        <input id="radioAll" type="radio" name="cetagory">
+                        <label for="radioAll">All</label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input id="radioSea" type="radio" name="cetagory">
+                        <label for="radioSea">Sea</label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input id="radioMountain" type="radio" name="cetagory">
+                        <label for="radioMountain">Mountain</label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input id="radioBackground" type="radio" name="cetagory">
+                        <label for="radioBackground">Background</label>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="gallery"></section>
+    </main>
     <script src="ImageGallery.js"></script>
 </body>
+
 </html>
