@@ -16,7 +16,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-size: 70%;
+    font-size: 50%;
 }
 
 main {
@@ -30,7 +30,7 @@ main {
 
 h2 {
     margin: 1.5rem;
-    margin-top: 4.5rem;
+    margin-top: 6.5rem;
     font-size: 2.5rem;
 
     #logo {
@@ -101,7 +101,6 @@ input:checked+label {
 #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fix, 1fr);
-    
     /* grid-template-rows: ; */
     gap: 0.5rem;
     width: 100%;
@@ -109,7 +108,14 @@ input:checked+label {
 }
 
 #gallery>div {
-    height: fit-content;
+    width: 100%;
+    box-shadow: 0 0 1rem 0.1rem rgb(209, 194, 194);
+    overflow: hidden;
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
 }
 
 img {
@@ -121,7 +127,7 @@ img {
 
 @media screen and (min-width: 600px) {
     html {
-        font-size: 85%;
+        font-size: 62.5%;
     }
 
     /* #gallery {
@@ -131,7 +137,7 @@ img {
 
 @media screen and (min-width: 1200px) {
     html {
-        font-size: 110%;
+        font-size: 95%;
     }
 
     /* #gallery {

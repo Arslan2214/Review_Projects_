@@ -1,9 +1,4 @@
-/*
-TODO: Show Images
-    TODO: Search Images
-    TODO: Filter on Options: All, Mountains, Sea, Forest, Beach
-    TODO: Infinite Scroll
-*/
+
 const Images = []
 let pageNo = 1;
 let currentQuery = 'ocean$animals';

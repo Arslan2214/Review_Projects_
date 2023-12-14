@@ -1,0 +1,123 @@
+:root {
+    --red: crimson;
+    --blk: rgb(24, 24, 24);
+    --wht: rgb(243, 245, 247);
+    --pur: rgb(176, 16, 117);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    background-color: var(--blk);
+    color: var(--wht);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2.8rem;
+
+    #logo {
+        color: var(--red);
+    }
+}
+
+button {
+    position: relative;
+    padding: 0.8rem 0.8rem;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 0 0.2rem 0 rgb(54, 51, 51);
+    border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    -ms-border-radius: 0.1rem;
+    -o-border-radius: 0.1rem;
+    transition: all 350ms;
+    -webkit-transition: all 350ms;
+    -moz-transition: all 350ms;
+    -ms-transition: all 350ms;
+    -o-transition: all 350ms;
+
+    &:hover {
+        /* top: -0.1rem;
+        left: -0.1rem; */
+        scale: 1.06;
+        box-shadow: 0 0 0.4rem 0 rgb(94, 89, 89);
+    }
+}
+
+#btnContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+    #startBtn {
+        background-color: var(--red);
+        color: aliceblue;
+    }
+
+    #resetBtn {
+        background-color: var(--pur);
+        color: aliceblue;
+    }
+}
+
+#arcade {
+    width: 100%;
+    height: 60vh;
+    padding: 1rem;
+    margin: 1.8rem 0.2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.8rem;
+    place-items: center;
+}
+
+.card {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 40, 40);
+    font-size: 3.8rem;
+    padding: 0.4rem;
+    width: min(20rem, 20vw);
+    aspect-ratio: 1;
+    transform-style: preserve-3d;
+    transition: all 550ms;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    -webkit-transition: all 550ms;
+    -moz-transition: all 550ms;
+    -ms-transition: all 550ms;
+    -o-transition: all 550ms;
+
+    &:hover {
+        scale: 1.1;
+        transform: rotateX(150);
+        -webkit-transform: rotateX(150);
+        -moz-transform: rotateX(150);
+        -ms-transform: rotateX(150);
+        -o-transform: rotateX(150);
+}
+}
