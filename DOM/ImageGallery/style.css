@@ -99,14 +99,23 @@ input:checked+label {
 }
 
 #gallery {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fix, 1fr);
+    
+    /* grid-template-rows: ; */
+    gap: 0.5rem;
     width: 100%;
     height: auto;
-    border-radius: 8px;
+}
+
+#gallery>div {
+    height: fit-content;
 }
 
 img {
-    max-width: 30rem;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 
@@ -115,9 +124,9 @@ img {
         font-size: 85%;
     }
 
-    #gallery {
+    /* #gallery {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -125,7 +134,7 @@ img {
         font-size: 110%;
     }
 
-    #gallery {
+    /* #gallery {
         grid-template-columns: repeat(3, 1fr);
-    }
+    } */
 }

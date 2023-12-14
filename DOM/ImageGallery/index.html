@@ -12,38 +12,45 @@
     <main>
         <h2>Welcome, to <span id="logo">Pics_Store</span></h2>
         <section>
-            <div id="inputField">
-                <input placeholder="Search" type="text">
+            <form id="inputField">
+                <input id="inputSearch" autocomplete="off" placeholder="Search" type="text">
                 <button id="searchBtn">Search</button>
-            </div>
+            </form>
             <ul id="cetagoryOpatiob">
                 <li>
                     <div>
-                        <input id="radioAll" type="radio" name="cetagory">
+                        <input id="radioAll" value="ocean$animals" type="radio" name="cetagory">
                         <label for="radioAll">All</label>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <input id="radioSea" type="radio" name="cetagory">
+                        <input id="radioSea" value="Sea" type="radio" name="cetagory">
                         <label for="radioSea">Sea</label>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <input id="radioMountain" type="radio" name="cetagory">
+                        <input id="radioMountain" value="Mountain" type="radio" name="cetagory">
                         <label for="radioMountain">Mountain</label>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <input id="radioBackground" type="radio" name="cetagory">
-                        <label for="radioBackground">Background</label>
+                        <input id="radioBackground" value="flower" type="radio" name="cetagory">
+                        <label for="radioBackground">Flower</label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input id="radioCat&Dog" value="cats&dogs" type="radio" name="cetagory">
+                        <label for="radioCat&Dog">Cats & Dogs</label>
                     </div>
                 </li>
             </ul>
         </section>
-        <section id="gallery"></section>
+        <section id="gallery">
+        </section>
     </main>
     <script src="ImageGallery.js"></script>
 </body>
