@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const plm = require('passport-local-mongoose');
+const mongoose = require("mongoose");
+const plm = require("passport-local-mongoose");
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -25,11 +25,11 @@ const userSchema = new mongoose.Schema({
   },
   posts: {
     type: [mongoose.Schema.Types.ObjectId],
-    ref: 'Post',
-    default: []
+    ref: "Post",
+    default: [],
   },
 });
 
 userSchema.plugin(plm);
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model("User", userSchema);

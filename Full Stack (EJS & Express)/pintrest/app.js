@@ -13,11 +13,10 @@ const passport = require("passport");
 require("dotenv").config();
 var app = express();
 
-// TODO: Mongo_DB Server is Not running ---> Start It.
 mongoose.connect(process.env.MONGO_URL);
 mongoose.connection
   .on("error", (err) => console.error(`MongoDB connection error: ${err}`))
-  .once("open", () => console.log("Connected to MongoDB"));
+  .once("open", () => console.log("DB is live... OK"));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

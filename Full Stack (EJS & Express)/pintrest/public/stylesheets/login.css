@@ -13,7 +13,7 @@ body {
   height: 650px;
   position: absolute;
   margin: auto;
-  top: 20%;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
@@ -138,4 +138,11 @@ hr {
   width: 50%;
   opacity: 0.4;
   margin-left: 25%;
+}
+#signUp {
+  font-weight: 600;
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+  }
 }
