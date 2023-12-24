@@ -9,6 +9,7 @@ const session = require("express-session");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const passport = require("passport");
+const userModel = require("./model/userModel");
 
 require("dotenv").config();
 var app = express();
@@ -31,14 +32,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-passport.serializeUser((user, done) => {
-  done(null, user.id);
-});
-passport.deserializeUser((id, done) => {
-  User.findById(id, (err, user) => {
-    done(err, user);
-  });
-});
+passport.serializeUser(userModel.serializeUser())
+passport.deserializeUser(userModel.deserializeUser())
 
 app.use(logger("dev"));
 app.use(express.json());

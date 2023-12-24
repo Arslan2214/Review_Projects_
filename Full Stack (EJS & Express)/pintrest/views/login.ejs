@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Pintrest</title>
+    <title>Login Pintrest</title>
 
     <link rel="stylesheet" href="../stylesheets/login.css" />
   </head>
@@ -16,24 +16,10 @@
           alt="pin logo"
           class="img1"
         />
-        <p class="header">Make Account to see more</p>
+        <p class="header">Login Account</p>
 
-        <form action="/register" method="post">
-          <input
-            type="text"
-            name="username"
-            placeholder="User Name"
-            class="detail"
-          />
-          <br />
-          <input
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            class="detail"
-          />
-          <br />
-          <input type="email" name="email" placeholder="Email" class="detail" />
+        <form action="/login" method="post">
+          <input type="text" name="username" placeholder="User Name" class="detail" />
           <br />
           <input
             type="password"
@@ -42,7 +28,7 @@
             class="detail"
           />
           <a id="ForgeLink" href="/forget">Forget Password</a>
-          <button type="submit" class="btn int">Register Account</button>
+          <button type="submit" class="btn int">LogIn Account</button>
         </form>
         <p class="or">OR</p>
         <!-- <button class="btn fbk">
@@ -66,7 +52,7 @@
             <b>Terms of Service, Privacy policy.</b>
           </p>
           <hr />
-          <p>Already have account? <a id="signUp" href="/login">Login Account</a></p>
+          <p>Not on Pinterest yet? <a id="signUp" href="#">Register Account</a></p>
         </footer>
       </div>
     </div>

@@ -4,30 +4,28 @@
   box-sizing: border-box;
 }
 body {
+  padding: 0.2vw 0;
+  height: 100vh;
   background-color: gray;
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
   background-color: white;
   width: 480px;
-  height: 650px;
-  position: absolute;
+  min-height: 500px;
   margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
 }
 .content {
-  width: 56%;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  width: 60%;
   text-align: center;
 }
 
@@ -61,11 +59,13 @@ body {
   outline: none;
 }
 
-h4 {
+#ForgeLink {
+  text-decoration: none;
+  color: #373636;
   font-size: 13px;
   font-weight: 700;
   position: relative;
-  left: -60px;
+  left: -25%;
   margin: 5px;
 }
 
@@ -140,8 +140,10 @@ hr {
   margin-left: 25%;
 }
 #signUp {
+  color: hsl(0, 1%, 21%);
   font-weight: 600;
   &:hover {
+    color: hsl(0, 5%, 10%);
     text-decoration: underline;
     text-underline-offset: 0.1rem;
   }
