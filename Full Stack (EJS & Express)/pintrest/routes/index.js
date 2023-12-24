@@ -8,19 +8,27 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 const isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) return next();
-  res.redirect("/");
+  res.redirect("/login");
+};
+const alreadyLoggedIn = (req, res, next) => {
+  if (!req.isAuthenticated()) return next();
+  res.redirect("/profile");
 };
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", alreadyLoggedIn, function (req, res, next) {
   res.render("index");
 });
 
-router.get("/login",function (req, res, next) {
+router.get("/login", alreadyLoggedIn,function (req, res, next) {
   res.render("login");
 });
 
 router.get("/profile", isLoggedIn, function (req, res, next) {
+  res.render("profile");
+});
+
+router.get("/feed", function (req, res, next) {
   res.render("feed");
 });
 
@@ -37,7 +45,7 @@ router.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/profile",
-    failureRedirect: "/",
+    failureRedirect: "/login",
   }),
   (req, res) => {}
 );

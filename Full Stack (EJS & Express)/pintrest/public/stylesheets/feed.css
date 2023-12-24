@@ -1,80 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #262626;
+  /* background-color: #262626; */
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad          Pro",
     "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background-color: #000000;
-  position: fixed;
-  width: 100%;
-  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
-    "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  z-index: 1;
-  opacity: 0.9;
-}
-
-.logo {
-  color: #49ffd0;
-  letter-spacing: 25px;
-  font-size: 20px;
-  background-color: #000000;
-}
-
-.navLink {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-  background-color: #000000;
-}
-
-.navLink li {
-  list-style: none;
-  background-color: #000000;
-}
-
-.navLink a {
-  color: aquamarine;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 16px;
-  background-color: #000000;
-}
-
-.navLink a:hover {
-  color: #588275;
-}
-
-.lines {
-  display: none;
-  cursor: crosshair;
-}
-
-.lines div {
-  width: 25px;
-  height: 3px;
-  background-color: aquamarine;
-  margin: 5px;
-}
-
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  padding-top: 17vh;
-}
-
 .container {
   padding-top: 13vh;
-  width: 1400px;
+  width: 80vw;
   margin: auto;
   columns: 6;
   column-gap: 20px;
@@ -88,16 +23,18 @@ header {
 .container .box img {
   max-width: 100%;
   min-width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 #bebdbd;
 }
 
 img:hover {
-  opacity: 0.95;
-  box-shadow: 0 0 10px #fff;
+  transition: scale 350ms;
+  scale: 1.02;
+  box-shadow: 0 0 5px 0 #888686e7;
 }
 
 .caption {
-  color: #fff;
+  color: #181818;
   font-family: Arial, Helvetica, sans-serif;
   padding: 2px;
 }

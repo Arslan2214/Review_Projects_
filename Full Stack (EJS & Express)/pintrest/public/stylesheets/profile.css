@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+#profileBanner {
+  width: 80%;
+  height: 250px;
+  margin: auto;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  
+  @media (max-width: 540px) {
+      flex-direction: column;
+      height: 400px;
+      text-align: center;
+  }
+}
+
+#avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  
+  @media (max-width: 540px) {
+      height: 250px;
+    flex-direction: column;
+    height: 300px;
+}
+}
+
+#info {
+  width: 100%;
+  height: 100%;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #3e3e3e;
+  margin: 0;
+  padding: 0;
+}
+#email {
+  margin: 0.5vw 0;
+  font-size: 18px;
+  color: #797878;
+}
+
+#activity {
+  color: #515050d2;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+#stats {
+  margin: auto 0 15px 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  @media (max-width: 580px) {
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+  }
+}
+
+
+.stats-text {
+  color: #5b5b5b;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stats-text svg {
+  fill: #5b5b5b;
+  width: 20px;
+  height: 20px;
+}
+
+.stats-text span {
+  color: #000000;
+  font-weight: 800;
+  margin: 0 5px;
+}
+
+#btn {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  width: 150px;
+  padding: 6px 10px;
+  border: 0;
+  background: #cf0d0dfd;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #980b0b;
+  }
+}
