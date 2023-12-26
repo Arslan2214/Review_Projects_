@@ -10,11 +10,11 @@
   background: #ffffff;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  
-  @media (max-width: 540px) {
-      flex-direction: column;
-      height: 400px;
-      text-align: center;
+
+  @media (max-width: 625px) {
+    flex-direction: column;
+    height: 400px;
+    text-align: center;
   }
 }
 
@@ -23,33 +23,51 @@
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  
-  @media (max-width: 540px) {
-      height: 250px;
+
+  @media (max-width: 625px) {
+    height: 250px;
     flex-direction: column;
     height: 300px;
-}
+  }
 }
 
 #info {
   width: 100%;
   height: 100%;
   margin: 0 15px;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
 }
 
 #name {
+  margin-top: 5px;
   font-size: 24px;
   font-weight: 800;
+  text-transform: capitalize;
   color: #3e3e3e;
   margin: 0;
   padding: 0;
 }
+
 #email {
   margin: 0.5vw 0;
   font-size: 18px;
   color: #797878;
+}
+
+#addPost {
+  background: #0b9854;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  padding: 5px 8px;
+  border-radius: 5px;
+
+  &:hover {
+    background: #098047;
+  }
 }
 
 #activity {
@@ -68,14 +86,13 @@
   gap: 8px;
   align-items: center;
   justify-content: space-evenly;
-  
+
   @media (max-width: 580px) {
-      flex-direction: column;
-      align-items: start;
-      justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
   }
 }
-
 
 .stats-text {
   color: #5b5b5b;
@@ -106,7 +123,7 @@
   font-size: 14px;
   font-weight: 500;
   margin: 0;
-  width: 150px;
+  /* width: 150px; */
   padding: 6px 10px;
   border: 0;
   background: #cf0d0dfd;
@@ -116,4 +133,50 @@
   &:hover {
     background: #980b0b;
   }
+}
+
+#btn_blue,
+[type="submit"] {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  width: 120px;
+  padding: 6px 10px;
+  border: 0;
+  background: #0d7bcffd;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  &:hover {
+    background: #0b7098;
+  }
+}
+
+#AddPostForm {
+  width: min(100%, 450px);
+  border-radius: 5px;
+  border: 0;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.45);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px 0 rgba(190, 189, 189, 0.776);
+  padding: 10px;
+}
+
+#popoverContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }

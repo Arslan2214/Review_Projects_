@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const session = require("express-session");
+const flash = require("connect-flash");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -35,6 +36,7 @@ app.use(passport.session());
 passport.serializeUser(userModel.serializeUser())
 passport.deserializeUser(userModel.deserializeUser())
 
+app.use(flash())
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

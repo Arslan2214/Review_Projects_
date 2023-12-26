@@ -78,6 +78,12 @@ body {
   margin: 5px 0px;
 }
 
+#errorMsg {
+  margin: 0;
+  color: #df0b16;
+  font-weight: 600;
+}
+
 .int {
   background-color: #f30d19;
   margin: 10px 0px;

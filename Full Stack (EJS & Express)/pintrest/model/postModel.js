@@ -5,10 +5,13 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+    default: "",
+  },
   likes: {
     type: Array,
-    type: null,
-    default: []
+    default: [],
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,
