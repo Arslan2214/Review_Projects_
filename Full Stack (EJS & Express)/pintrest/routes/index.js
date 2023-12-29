@@ -27,12 +27,14 @@ router.get("/login", alreadyLoggedIn, function (req, res, next) {
   res.render("login", { error: req.flash("error") });
 });
 
-router.get("/profile", alreadyLoggedIn, async function (req, res) {
-  const { username, fullName, email, discription, posts } =
-    await userModel.findById(req.session.passport.user._id).populate("posts");
-    
-    console.log('Posts =>', posts)
-    res.render("profile", { username, fullName, email, discription});
+router.get("/profile", isLoggedIn, async function (req, res) {
+  const { username, fullName, email, discription, posts } = await userModel
+    .findById(req.user._id)
+    .populate("posts");
+
+  // console.log("User =>", ser);
+  
+  res.render("profile", { username, fullName, email, discription, posts });
 });
 // Profile Edit
 router.get("/editProfile", isLoggedIn, async function (req, res, next) {
@@ -45,10 +47,13 @@ router.get("/editProfile", isLoggedIn, async function (req, res, next) {
 // TODO: Profile is Not Updated                  |-> Data in DB is not updated <-|
 // Updated Profile
 router.post("/saveProfile", async function (req, res, next) {
-  const newUser = await userModel.findOneAndUpdate(req.session.passport.user._id, {
-    ...req.user,
-    ...req.body,
-  });
+  const newUser = await userModel.findOneAndUpdate(
+    req.session.passport.user._id,
+    {
+      ...req.user,
+      ...req.body,
+    }
+  );
   console.log(newUser);
   res.redirect("/profile");
 });

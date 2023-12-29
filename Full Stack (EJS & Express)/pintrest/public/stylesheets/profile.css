@@ -180,3 +180,36 @@
   align-items: center;
   gap: 15px;
 }
+
+.myContainer {
+  padding: 13vh 5vh 0;
+  max-width: 1400px;
+  margin: auto;
+  columns: 6;
+}
+@media (max-width: 1080px) {
+  .myContainer {
+    columns: 4;
+  }
+}
+@media (max-width: 900px) {
+  .myContainer {
+    columns: 3;
+  }
+}
+@media (max-width: 640px) {
+  .myContainer {
+    columns: 2;
+  }
+}
+@media (max-width: 480px) {
+  .myContainer {
+    columns: 1;
+  }
+}
+.box {
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  border-radius: 15px;
+}
