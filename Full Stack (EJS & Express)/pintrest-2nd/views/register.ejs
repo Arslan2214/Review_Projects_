@@ -1,0 +1,57 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-[100vw] h-[100vh] flex justify-center items-center bg-zinc-50">
+  <div
+    class="bg-white flex flex-col items-center gap-1 shadow-md p-10 rounded-2xl"
+  >
+    <img class="w-20 rounded-full" src="/images/logo.png" alt="logo" />
+    <h2 class="text-4xl font-semibold">Register</h2>
+    <span class="text-3xl">Welcome to&nbsp;Pintrest</span>
+    <form class="my-4 w-full" method="post">
+      <div class="flex flex-col items-start my-2">
+        <label for="inputEmail" class="text-lg text-zinc-800">Fullname</label>
+        <input
+          class="outline-0 shadow-sm rounded-lg bg-white px-2 py-1 w-full border placeholder:text-zinc-500"
+          type="text"
+          placeholder="i.e. user@abc.com"
+          name="email"
+          id="inputEmail"
+        />
+      </div>
+      <div class="flex flex-col items-start my-2">
+        <label for="inputEmail" class="text-lg text-zinc-800">Email</label>
+        <input
+          class="outline-0 shadow-sm rounded-lg bg-white px-2 py-1 w-full border placeholder:text-zinc-500"
+          type="email"
+          placeholder="i.e. user@abc.com"
+          name="email"
+          id="inputEmail"
+        />
+      </div>
+      <div class="flex flex-col items-start my-2">
+        <label for="inputEmail" class="text-lg text-zinc-800">Password</label>
+        <input
+          class="outline-0 shadow-sm rounded-lg bg-white px-2 py-1 w-full border placeholder:text-zinc-500"
+          type="password"
+          placeholder="*****"
+          name="email"
+          id="inputEmail"
+        />
+      </div>
+      <button
+        class="w-full py-1 mt-2 rounded-2xl bg-red-500 hover:bg-red-600 text-white"
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </form>
+    <span
+      >Already have account?
+      <a class="font-[500] underline underline-offset-2" href="#"
+        >Login</a
+      ></span
+    >
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>
