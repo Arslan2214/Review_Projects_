@@ -7,14 +7,24 @@
     <img class="w-20 rounded-full" src="/images/logo.png" alt="logo" />
     <h2 class="text-4xl font-semibold">Register</h2>
     <span class="text-3xl">Welcome to&nbsp;Pintrest</span>
-    <form class="my-4 w-full" method="post">
+    <form class="my-4 w-full" action="/register" method="post">
       <div class="flex flex-col items-start my-2">
         <label for="inputEmail" class="text-lg text-zinc-800">Fullname</label>
         <input
           class="outline-0 shadow-sm rounded-lg bg-white px-2 py-1 w-full border placeholder:text-zinc-500"
           type="text"
-          placeholder="i.e. user@abc.com"
-          name="email"
+          placeholder="i.e. John"
+          name="fullName"
+          id="inputEmail"
+        />
+      </div>
+      <div class="flex flex-col items-start my-2">
+        <label for="inputEmail" class="text-lg text-zinc-800">Username</label>
+        <input
+          class="outline-0 shadow-sm rounded-lg bg-white px-2 py-1 w-full border placeholder:text-zinc-500"
+          type="text"
+          placeholder="i.e. John"
+          name="username"
           id="inputEmail"
         />
       </div>
@@ -34,7 +44,7 @@
           class="outline-0 shadow-sm rounded-lg bg-white px-2 py-1 w-full border placeholder:text-zinc-500"
           type="password"
           placeholder="*****"
-          name="email"
+          name="password"
           id="inputEmail"
         />
       </div>
@@ -47,7 +57,7 @@
     </form>
     <span
       >Already have account?
-      <a class="font-[500] underline underline-offset-2" href="#"
+      <a class="font-[500] underline underline-offset-2" href="/"
         >Login</a
       ></span
     >
