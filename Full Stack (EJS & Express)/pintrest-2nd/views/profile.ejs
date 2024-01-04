@@ -1,3 +1,110 @@
 <% include ./partials/header.ejs %>
-<h2 class="text-center mt-8">Welcome To Profile</h2>
+
+<% include ./partials/navbar.ejs %>
+
+<main class="w-full min-h-screen pb-10 pt-28">
+  <section class="w-full flex flex-col items-center justify-center">
+    <!-- Profile Image Form -->
+    <form
+      id="profileImageForm"
+      hidden
+      action="/fileUpload"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input name="avatar" type="file" />
+    </form>
+
+    <!-- Upper Section => image All Btns -->
+    <div class="relative">
+      <div
+        class="sm:w-[160px] overflow-hidden w-[130px] aspect-square rounded-full"
+      >
+        <img class="h-full w-full object-cover" 
+        <% if (profileImage) { %>
+        src="/images/uploads/<%= profileImage %>" 
+        <% } else { %> 
+            src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vzAeNqH03TdQOGhSMrF-9Fm18gYkKn2YIAhee_wh7a9JBWUm3bNhSTBmLf3FFANY4Zg&usqp=CAU"
+        <% } %> 
+        alt="profile_image" 
+        />
+      </div>
+      <span
+        id="editProfileImageIcon"
+        class="bg-zinc-50 shadow-md rounded-full flex justify-center items-center w-8 h-8 absolute bottom-1 right-3 cursor-pointer"
+      >
+        <i class="text-zinc-600 ri-pencil-fill"></i>
+      </span>
+    </div>
+    <div class="sm:text-3xl text-2xl mt-2 font-semibold text-zinc-800">
+      <%= fullName %>
+    </div>
+    <span class="sm:text-lg text-md text-zinc-500">@<%= username %></span>
+    <div
+      class="w-fullflex justify-between items-center sm:text-xl text-lg mt-3"
+    >
+      <a
+        href="/addpost"
+        class="md:px-4 px-2 md:py-2 py-1 border-2 hover:bg-green-800 bg-green-700 text-white rounded-lg text-sm font-semibold"
+        >Add Post</a
+      >
+      <a
+        href="/edit"
+        class="md:px-4 px-2 md:py-2 py-1 border-2 hover:bg-zinc-200 bg-zinc-100 rounded-xl text-sm font-semibold"
+        >Edit Profile</a
+      >
+      <a
+        href="/logout"
+        class="md:px-4 px-2 md:py-2 py-1 border-2 hover:border-rose-700 hover:bg-rose-700 hover:text-white bg-zinc-100 rounded-lg text-sm font-semibold"
+        >Logout</a
+      >
+    </div>
+  </section>
+  <hr class="w-[80%] mx-auto my-4" />
+
+  <!-- Post List -->
+  <% if (posts.length <= 0) { %>
+    <div class="mt-3 text-2xl text-center text-zinc-600 font-semibold" >
+      No Post
+    </div>
+  <% } else { posts.map(post => { %>
+    
+    <section
+    class="w-full xl:columns-6 lg:columns-5 md:columns-4 sm:columns-3 columns-1 px-10"
+  >
+    <a
+      href="/#"
+      class="relative my-4 shadow-md group overflow-hidden w-42 flex flex-col justify-center items-center rounded-sm"
+    >
+      <img
+        class="object-cover w-full rounded-t-sm"
+        src="/images/uploads/<%= post.postImage %>"
+        alt=""
+        />
+        <div class="w-full text-start p-2">
+          <div class="font-semibold text-lg"><%= post.title %></div>
+          <div class="text-[14px] text-zinc-500 opacity-80">
+            <%= post.description %>
+          </div>
+          <div class="text-[13px] text-zinc-500 opacity-80">
+            <span>28</span> Pins
+          </div>
+        </div>
+      </a>
+    </section>
+    <% }); } %>
+</main>
+
+<script>
+  document
+    .querySelector("#editProfileImageIcon")
+    .addEventListener("click", () => {
+      document.querySelector("#profileImageForm input").click();
+    });
+  document
+    .querySelector("#profileImageForm input")
+    .addEventListener("change", () => {
+      document.querySelector("#profileImageForm").submit();
+    });
+</script>
 <% include ./partials/footer.ejs %>

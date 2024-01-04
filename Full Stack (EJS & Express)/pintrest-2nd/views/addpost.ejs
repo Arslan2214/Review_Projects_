@@ -1,0 +1,29 @@
+<% include ./partials/header.ejs %> <% include ./partials/navbar.ejs %>
+
+<main class="flex flex-col justify-center items-center min-h-screen w-full">
+  <form
+    class="relative flex flex-col w-[80%] sm:w-1/2 lg:w-1/3 gap-3 p-4 sm:p-8 rounded-xl shadow-lg text-center"
+    action="/createpost"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    <h2 class="text-4xl font-semibold">Add New Post</h2>
+    <hr class="mb-4 mt-2 mx-auto w-[80%]">
+    <input type="file" name="postImage" class="p-2 font-sans">
+    <input
+      class="w-full text-zinc-700 outline-0 border py-1 px-2 bg-white rounded-sm"
+      placeholder="Post title"
+      type="text"
+      name="title"
+    />
+    <textarea name="description" placeholder="Some details" class="w-full h-28 text-zinc-800 outline-0 border py-1 px-2 bg-white rounded-sm resize-none"></textarea>
+    <button
+      class="md:px-4 w-48 max-w-full mx-auto px-2 md:py-2 py-1 border-2 hover:bg-green-800 bg-green-700 text-white rounded-lg font-semibold"
+      type="submit"
+    >
+      Add Post
+    </button>
+    <a href="/profile" class="absolute w-14 border border-rose-700 rounded-bl-xl rounded-tr-xl top-0 right-0 py-2 px-3 hover:bg-rose-700 text-rose-700 hover:text-white text-xl">X</a>
+  </form>
+</main>
+<% include ./partials/footer.ejs %>

@@ -25,6 +25,12 @@ const userSchema = new Schema({
     type: Array,
     default: [],
   },
+  posts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Post",
+    },
+  ],
 });
 
 userSchema.plugin(plm);
