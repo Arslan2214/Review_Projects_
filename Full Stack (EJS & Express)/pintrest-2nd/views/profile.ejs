@@ -70,10 +70,10 @@
   <% } else { posts.map(post => { %>
     
     <section
-    class="w-full xl:columns-6 lg:columns-5 md:columns-4 sm:columns-3 columns-1 px-10"
+    class="w-full lg:columns-5 md:columns-4 sm:columns-3 columns-1 px-10 mt-8"
   >
     <a
-      href="/#"
+      href="/viewpost/<%= post._id %>"
       class="relative my-4 shadow-md group overflow-hidden w-42 flex flex-col justify-center items-center rounded-sm"
     >
       <img
@@ -85,9 +85,6 @@
           <div class="font-semibold text-lg"><%= post.title %></div>
           <div class="text-[14px] text-zinc-500 opacity-80">
             <%= post.description %>
-          </div>
-          <div class="text-[13px] text-zinc-500 opacity-80">
-            <span>28</span> Pins
           </div>
         </div>
       </a>

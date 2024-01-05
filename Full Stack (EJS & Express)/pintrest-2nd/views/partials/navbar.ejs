@@ -1,24 +1,65 @@
+<style>
+  @media (max-width: 380px) {
+    #logout_btn {
+      display: none;
+    }
+  }
+</style>
+
 <nav
   class="fixed top-0 w-full max-w-[1640px] mx-auto bg-white z-40 shadow-sm flex justify-between py-2 px-1 sm:px-4"
 >
-  <span class="flex gap-1 sm:gap-3 items-center">
+  <a href="/feed" class="flex gap-1 sm:gap-3 items-center">
     <img class="w-12 h-12" src="/images/logo.png" alt="" /><span
       class="inline-block font-semibold sm:text-4xl text-3xl"
       >Pinterest</span
     >
-  </span>
+  </a>
   <div class="flex items-center gap-5">
     <ul class="hidden sm:flex gap-4 text-lg pt-2 items-center justify-between">
       <a href="/profile">Profile</a>
       <a href="/feed">Feed</a>
     </ul>
-    <div class="flex items-center gap-2 justify-between">
+    <div id="logout_btn" class="flex items-center gap-2 justify-between">
       <a
         href="/logout"
         class="w-full py-1 sm:px-10 px-4 mt-2 rounded-2xl border-2 border-red-500 hover:text-white hover:bg-red-500 text-red-500"
         >Logout</a
       >
     </div>
-    <button class="inline-block sm:hidden mr-2 text-xl text-red-500 border-2 border-red-500 hover:bg-red-500 hover:text-white rounded-lg py-1 px-3 "><i class="ri-menu-line"></i></button>
+    <div class="relative">
+      <button
+        popovertarget="res_nav"
+        popovertargetaction="open"
+        class="inline-block sm:hidden mr-2 text-xl text-red-500 border-2 border-red-500 hover:bg-red-500 hover:text-white rounded-lg py-1 px-3"
+      >
+        <i class="ri-menu-line"></i>
+      </button>
+      <div
+        popover
+        id="res_nav"
+        class="absolute top-[-58%] left-0 w-screen h-40 bg-white"
+      >
+        <ul class="flex justify-evenly items-center h-12 py-8">
+          <li
+            class="w-full text-center text-xl hover:underline underline-red-500 hover:text-red-600 text-red-500"
+          >
+            <a href="/profile">Profile</a>
+          </li>
+          <li
+            class="w-full text-center text-xl hover:underline underline-red-500 hover:text-red-600 text-red-500"
+          >
+            <a href="/feed">Gallery</a>
+          </li>
+        </ul>
+        <div class="flex text-center items-center gap-2 justify-between pb-4">
+          <a
+            href="/logout"
+            class="w-1/2 mx-auto py-1 sm:px-10 px-4 mt-2 rounded-2xl border-2 border-red-500 hover:text-white hover:bg-red-500 text-red-500"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </nav>

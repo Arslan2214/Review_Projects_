@@ -35,15 +35,23 @@ router.get("/addpost", isLoggedIn, function (req, res, next) {
   res.render("addpost");
 });
 
-router.get("/profile", isLoggedIn,  async (req, res, next) => {
-  const user = await userModel.findOne({username: req.user.username}).populate('posts');
-  res.render("profile", user);
-  
-  // res.render("profile", {
-  //   username: "username",
-  //   fullName: "Full Name",
-  // });
+router.get("/feed", isLoggedIn, async function (req, res, next) {
+  const posts = await postModel.find().populate("user");
+  res.render("feed", { posts: posts });
 });
+
+router.get("/viewpost/:id", isLoggedIn, async function (req, res, next) {
+  const post = await postModel.findOne({ _id: req.params.id }).populate("user");
+  res.render("viewpost", post);
+});
+
+router.get("/profile", isLoggedIn, async (req, res, next) => {
+  const user = await userModel
+    .findOne({ username: req.user.username })
+    .populate("posts");
+  res.render("profile", user);
+});
+
 router.post(
   "/fileUpload",
   isLoggedIn,
